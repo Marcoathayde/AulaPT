@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Amaranth|Open+Sans|Source+Sans+Pro');
+
+* {
+	font-family: 'Open sans', sans-serif;
+}
+
+#background {
+	background-image: url("sabri.jpg");
+
+/** Resize image to be fit the window **/
+
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: grey;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.aba {
+
+/** Fixes it on the right side of the window **/
+
+	position: fixed;
+	right: 0;
+
+	width: 25em;
+/** Fills entire vertical space **/
+	height: 100vh;
+
+	background-color: white;
+/**
+	box-shadow: -2px 0px 50px;
+**/
+	flex-direction: column;
+	justify-content: space-around;
+
+/** Scrollbar appears only if there's overflow in the y-axi **/
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+.aba * {
+}
+
+.title {
+	font-family: 'Amaranth';
+	font-weight: lighter;
+	font-size: 235%;
+	color: #4c4c4c;
+
+	text-align: left;
+	margin-top: 24.5%;
+	margin-left: 13.5%;
+	
+	padding-bottom: 6%;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.box {
+	width: 100%;
+	margin-left: 13.5%;
+	margin-bottom: -1%;
+
+	color: #9f9f9f;
+	font-size: 0.77em;
+}
+
+.box input {
+	margin-top: -1em;
+	width: 72.8%;
+
+	border: 1px solid lightgrey;
+	border-radius: 4px;
+
+	font-size: 1.5em;
+	padding: 0.2em;
+}
+
+input.signup {
+	background-color: white;
+	margin-top: 1.6em;
+
+	width: 75.3%;
+	height: 2.75em;
+	font-size: 0.95em;
+	padding: 0.2em;
+
+	border: 1px solid #39cc6c;
+	color: #39cc6c;
+}
+
+input.signup:hover {
+	background-color: #39cc6c;
+	border: 1px solid lightgrey;
+	color: white;
+	cursor: pointer;
+}
+
+.box hr {
+	margin-left: 0;
+	width: 70.7%;
+	padding: 0.7em;
+
+	border-color: rgb(231, 231, 231);
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+}
+
+.box2 {
+	width: 100%;
+	margin-left: 13.5%;
+	margin-bottom: -1%;
+
+
+	margin-top: 6%;
+	color: #909090;
+	font-size: 0.8em;
+}
+
+.box2 h3 {
+	font-family: 'Source Sans Pro';
+}
+
+.button-link a:link, a:visited {
+	width: 72%;
+	margin-left: 13.5%;
+	margin-bottom: -1%;
+	font-size: 0.77em;
+
+	background-color: white;
+	display: block;
+	color: #39cc6c;
+
+	border: 1px solid #39cc6c;
+	border-radius: 4px;
+	
+	height: 1.6em;
+
+	font-size: 0.75em;
+
+	padding: 0.52em;
+
+	text-align: center;
+	text-decoration: none;
+}
+
+.button-link a:hover, a:active {
+	background-color: #39cc6c;
+	color: white;
+	border: 1px solid lightgrey;
+
+}
