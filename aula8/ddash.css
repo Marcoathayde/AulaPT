@@ -43,9 +43,6 @@
 	overflow-x: hidden;
 }
 
-.aba * {
-}
-
 .title {
 	font-family: 'Amaranth';
 	font-weight: lighter;
@@ -159,4 +156,36 @@ input.signup:hover {
 	color: white;
 	border: 1px solid lightgrey;
 
+}
+
+/** In cases of conflict,
+CSS classes declared later in the file will take priority **/
+
+@media (max-width: 500px) {
+	.aba {
+		width: 100%;
+	}
+	#background {
+		background-image: url("");
+	}
+}
+
+@media (min-width: 501px) and (max-width: 1024px) {
+	* {
+		font-size: 1.12em;
+	}
+	.aba {
+		width: 60%;
+	}
+}
+
+@media (max-height: 500px) {
+	* {
+		font-size: 0.95em;
+	}
+	.aba {
+	}
+	.title {
+		margin-top: 3%;
+	}
 }
