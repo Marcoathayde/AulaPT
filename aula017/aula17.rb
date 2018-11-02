@@ -1,12 +1,11 @@
 class Refeicao
-	@@vend = 0
 	def initialize(nome, tipo, desc, preco, disp)
 		@nome = nome
 		@tipo = tipo
 		@desc = desc
 		@preco = preco
 		@disp = disp
-		@@vend += 1
+		@vend = 0
 	end
 
 	def nome
@@ -35,10 +34,13 @@ class Refeicao
 
 	def preco
 		dec = (@preco - @preco.floor) * 100
-		puts "R$" + @preco.floor.to_s + "," + dec.round.to_s
+		puts "R$" + @preco.floor.to_s + "," + "%02d" % [dec]
 	end
 	def preco=(newprice)
 		@preco = newprice
+	end
+	def precoRaw
+		@preco
 	end
 
 	def disp
@@ -55,15 +57,31 @@ class Refeicao
 	def vendas
 		puts @preco * @vend
 	end
+
 end
 
 class Cart
-	@content = []
-	@price = 0
-	@items = 0
+	def initialize
+		@content = Array.new
+		@price = 0
+		@items = 0
+	end
 
-	def add (item)
+	def add(item)
 		@content << item
+		@price += item.precoRaw
+		@items += 1
+	end
+
+	def show
+		@content.sort!
+
+		@content.each do |item|
+			if 
+			item.nome
+			item.preco
+			item.disp
+		end
 	end
 
 end
@@ -72,16 +90,12 @@ end
 mac = Refeicao.new("Macarrão", :Massa, "Macarrãozin.", 15, false)
 
 
-mac.preco
+carrinho = Cart.new
+
+carrinho.add(mac)
+carrinho.add(mac)
+carrinho.add(mac)
+carrinho.add(mac)
 
 
-carrinho << mac
-
-def content(carr)
-	carr.each do |item|
-	
-
-
-	end
-end
-
+carrinho.show
